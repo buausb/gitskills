@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body{
+				margin: 0;
+				background-image: linear-gradient(to bottom,#000000,#2A0A12);
+				position: relative;
+			}
+			ul{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+			.banner{
+				height: 500px;
+				width: 980px;
+				margin: 0 auto 0px;
+				background-color: aqua;
+				position: relative;
+				overflow: hidden;
+			}
+			.banner ul{
+				width: 15000px;
+				height: 500px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.banner ul li{
+				width: 980px;
+				height: 500px;
+				float: left;
+			}
+			.banner .pre,.banner .next{
+				width: 50px;
+				height: 80px;
+				position: absolute;
+				top:50%;
+				margin-top: -40px;
+				background-size: 50px 80px;
+				cursor: pointer;
+			}
+			.banner .pre{
+				left: 0px;
+				background-image: url("img/leftwhite.png");
+				
+			}
+			.banner .next{
+				right: 0px;
+				background-image: url(img/rightwhite.png);
+			}
+			.banner .pre:hover{
+				background-image: url("img/leftblack.png");
+			}
+			.banner .next:hover{
+				background-image: url("img/rightblack.png");
+			}
+			.banner .button{
+				width: 100%;
+				height: 50px;
+				background-color: rgb(0,0,0,0.5);
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				font-size: 0px;
+				text-align: center;
+				line-height: 50px;
+			}
+			.banner .button ul{
+				position: absolute;
+				top: 10%;
+				left: 40%;
+				width: 300px;
+				height: 50px;
+				text-align: center;
+			}
+			.banner .button ul li{
+				width: 10px;
+				height: 10px;
+				background-color: white;
+				display: inline-block;
+				border-radius:50%;
+				margin: 5px;
+				cursor: pointer;
+				
+			}
+			.top{
+				margin: 0 0 0 380px;
+				width: 800px;
+				height: 300px;
+				/*background-image: url("img/lili2222.png");
+				background-repeat: no-repeat;*/
+			}
+			#tiaozhuan{
+				display: block;
+				height: 300px;
+				color: white;
+			}
+			.LOL{
+				width: 100%;
+				height: 400px;
+				position: absolute;
+				background-image: rgb(0,0,0,0);
+				position: absolute;
+				top: 150px;
+				pointer-events: none;
+			}
+			.LOL h1{
+				color: rgb(105, 105, 105,0.1);
+				font-family: 黑体;
+				font-size: 11rem;
+				margin: 0;
+				padding: 0;
+				letter-spacing: -0.3rem;
+				position: relative;
+				margin: -130px 45px;
+				
+			}
+			.LOL h1::after{
+				content: 'League of Legends';
+				color: transparent;
+				top: 0;
+				left: 0;
+				position: absolute;
+				-webkit-clip-path: ellipse(100px 100px at 0 50%);;
+				clip-path: ellipse(100px 100px at 0 50%);
+				animation: spotlight 10s infinite;
+				background-image: url("img/jianbianjianbian.jpg");
+				background-position: center  center;
+				background-size: 150%;
+				background-repeat: no-repeat;
+				-webkit-background-clip: text;
+				background-clip: text;
+				opacity: 0.5;
+				
+			}
+			@keyframes spotlight {
+				0%{
+					-webkit-clip-path: ellipse(100px 100px at 0 50%);;
+					clip-path: ellipse(100px 100px at 0 50%);
+				}
+				
+				50%{
+					-webkit-clip-path: ellipse(100px 100px at 100% 50%);;
+					clip-path: ellipse(100px 100px at 100% 50%);
+				}
+				
+				100%{
+					-webkit-clip-path: ellipse(100px 100px at 0 50%);;
+					clip-path: ellipse(100px 100px at 0 50%);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="LOL">
+			<h1>League of Legends</h1>
+		</div>
+		<div class="top">
+			<a id="tiaozhuan" href="hello.html" target="_blank" title="跳转到主页面">
+				<img src="img/lili2222.png">
+				
+			</a>
+		</div>
+		<div class="banner">
+			<ul id="imglist">
+				<li><img src="img/motengdatu.jpg" ></li>
+				<li><img src="img/manwangdatu.jpg" ></li>
+				<li><img src="img/jianmodatu.jpg" ></li>
+				<li><img src="img/wuyadatu.jpg" ></li>
+				<li><img src="img/gailundatu.jpg" ></li>
+				<li><img src="img/zhaoxindatu.jpg" ></li>
+				<li><img src="img/goutoudatu.jpg" ></li>
+				<li><img src="img/xiadatu.jpg" ></li>
+				<li><img src="img/jianshengdatu.jpg" ></li>
+				<li><img src="img/nvhuangdatu.jpg" ></li>
+				<li><img src="img/motengdatu.jpg" ></li>
+			</ul>
+			<div class="pre">
+				
+			</div>
+			<div class="next">
+				
+			</div>
+			<div class="button">
+				<ul id="icolist">
+					<li id="1"></li>
+					<li id="2"></li>
+					<li id="3"></li>
+					<li id="4"></li>
+					<li id="5"></li>
+					<li id="6"></li>
+					<li id="7"></li>
+					<li id="8"></li>
+					<li id="9"></li>
+					<li id="10"></li>
+				</ul>
+			</div>
+		</div>
+		
+	</body>
+	<script>
+		var epre = document.querySelector('.pre');
+		var enext = document.querySelector('.next');
+		var esico = document.getElementById('icolist').getElementsByTagName('li');
+		var esicolist = document.querySelector('#icolist');
+		var esicoimglist = document.querySelector('#imglist');
+		var left = 0;
+		var timer;
+		run();
+		function run(){
+			if(left <= -9800){
+				left = 0;
+			}
+			var m = Math.floor(-left / 980);
+			icoChange(m);
+			imglist.style.marginLeft = left+'px';
+			var n = (left % 980 == 0)?1200:10;
+			left -= 10;
+			timer = setTimeout(run,n);
+			
+		}
+		//做一个图片定位函数
+		function imageChange(n){
+			let lt = -(n * 980);
+			imglist.style.marginLeft = lt + 'px';
+			left = lt;
+		}
+		epre.onclick = function(){
+			let prego = Math.floor(-left / 980) -1;
+			if(prego == -1){
+				prego = 9;
+			}
+			imageChange(prego);
+		}
+		enext.onclick = function(){
+			let nextgo = Math.floor(-left / 980) +1;
+			if(nextgo == 10){
+				nextgo = 0;
+			}
+			imageChange(nextgo);
+		}
+		function icoChange(m){
+			for (var i = 0; i < esico.length; i++) {
+				esico[i].style.backgroundColor='';
+			}
+			if(m < esico.length){
+				esico[m].style.backgroundColor = "red";
+			}
+		}
+		esicolist.onclick = function(){
+			var tg = event.target;
+			let ico = tg.id-1;
+			imageChange(ico);
+			icoChange(ico);
+		}
+		esicoimglist.onmouseover = function(){
+			let lo = Math.floor(-left / 980);
+			imageChange(lo);
+		}
+	</script>
+</html>
